@@ -20,9 +20,9 @@ function preload(){
 }
 function setup(){
     createCanvas(windowWidth/2,windowHeight);
-    bg = createSprite(width/2,height/2,width,height);
+    bg = createSprite(width/2,height/2,width - 50,height-50);
     bg.addImage(bgImage);
-    bg .scale = 1.7;
+    bg.scale = 1.7;
     bg.velocityY = 3;
 
     boy=createSprite(width/2,-200,10,10);
@@ -78,8 +78,8 @@ function draw(){
         knifeGroup.destroyEach();
         textSize(50);
         fill(255,0,0);
-        text("Game Over !",width/2 - 100,height/2-30);
-        textSize(30);
+        text("Game Over !",width/2 - 150,height/2-30);
+        textSize(25);
         text("PLEASE TRY AGAIN BY PRESSING SPACE",width/2 - 250,height/2+60);
         if (keyDown(32)){
             gameState = 0;
@@ -94,10 +94,10 @@ function draw(){
         }
     }
     drawSprites()
-    textSize(30);
+    textSize(25);
     fill("yellow")
     text("Time of Survival: "+ score,width - 400, 50);
-    text("High Score: " + high , 50,50)
+    text("High Score: " + high , 10,50)
 }
 function Base(){
     if (frameCount % 50 === 0 ){
