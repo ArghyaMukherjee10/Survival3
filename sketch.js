@@ -22,7 +22,7 @@ function setup(){
     createCanvas(windowWidth/2,windowHeight);
     bg = createSprite(width/2,height/2,width - 50,height-50);
     bg.addImage(bgImage);
-    bg.scale = 1.5;
+    bg.scale = 1.2;
     bg.velocityY = 3;
 
     boy=createSprite(width/2,-200,10,10);
@@ -96,7 +96,7 @@ function draw(){
     drawSprites()
     textSize(25);
     fill("yellow")
-    text("Time of Survival: "+ score,width - 3, 50);
+    text("Time of Survival: "+ score,width - 300, 50);
     text("High Score: " + high , 20,50)
 }
 function Base(){
